@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,12 +31,6 @@ justify-content:space-between;
 align-items:center;
 padding:20px 10%;
 background:#000;
-position:sticky;
-top:0;
-}
-
-nav h2{
-font-weight:600;
 }
 
 nav ul{
@@ -55,7 +51,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
 }
 
 .hero h1{
@@ -64,7 +59,6 @@ margin-bottom:10px;
 }
 
 .hero p{
-font-size:18px;
 color:#ccc;
 margin-bottom:30px;
 }
@@ -106,15 +100,21 @@ transform:scale(1.05);
 
 .project img{
 width:100%;
-display:block;
 }
 
 .project-info{
 padding:20px;
 }
 
-.about{
-max-width:700px;
+.contact-box{
+background:#1b1b1b;
+padding:30px;
+border-radius:10px;
+max-width:600px;
+}
+
+.contact-box p{
+margin-bottom:10px;
 }
 
 .socials{
@@ -124,53 +124,24 @@ margin-top:20px;
 }
 
 .socials a{
-color:white;
 text-decoration:none;
-font-size:20px;
-}
-
-.contact{
-max-width:600px;
-}
-
-input,textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-margin-bottom:15px;
-border:none;
-background:#1b1b1b;
 color:white;
+background:#222;
+padding:10px 15px;
+border-radius:8px;
+transition:0.3s;
 }
 
-button{
-padding:12px 25px;
-border:none;
-background:white;
-color:black;
-font-weight:600;
-cursor:pointer;
+.socials a:hover{
+background:#444;
 }
 
 footer{
 text-align:center;
 padding:40px;
 background:#000;
-margin-top:50px;
 color:#777;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:40px;
-}
-
-nav{
-flex-direction:column;
-gap:10px;
-}
-
+margin-top:40px;
 }
 
 </style>
@@ -181,12 +152,11 @@ gap:10px;
 
 <nav>
 
-<h2>Steven</h2>
+<h2>Steven Obando</h2>
 
 <ul>
 
 <li><a href="#portfolio">Portafolio</a></li>
-<li><a href="#about">Sobre mí</a></li>
 <li><a href="#contact">Contacto</a></li>
 
 </ul>
@@ -197,9 +167,9 @@ gap:10px;
 
 <div class="hero">
 
-<h1>Steven Obando</h1>
+<h1>Diseñador Gráfico</h1>
 
-<p>Diseñador gráfico especializado en identidad visual, branding y diseño digital.</p>
+<p>Branding • Identidad Visual • Diseño Creativo</p>
 
 <a class="btn" href="#portfolio">Ver trabajos</a>
 
@@ -216,7 +186,7 @@ gap:10px;
 <div class="project">
 <img src="https://picsum.photos/500/400">
 <div class="project-info">
-<h3>Branding Proyecto</h3>
+<h3>Proyecto de Branding</h3>
 <p>Identidad visual completa.</p>
 </div>
 </div>
@@ -241,42 +211,31 @@ gap:10px;
 
 </section>
 
-<section id="about">
-
-<h2 class="section-title">Sobre mí</h2>
-
-<div class="about">
-
-<p>
-Soy diseñador gráfico enfocado en crear soluciones visuales profesionales
-para marcas, empresas y proyectos creativos.
-</p>
-
-<div class="socials">
-
-<a href="#">Instagram</a>
-<a href="#">Behance</a>
-<a href="#">LinkedIn</a>
-
-</div>
-
-</div>
-
-</section>
-
 <section id="contact">
 
 <h2 class="section-title">Contacto</h2>
 
-<div class="contact">
+<div class="contact-box">
 
-<input type="text" placeholder="Nombre">
+<p>📧 Email: <a href="mailto:stephenobando@email.com">stephenobando@email.com</a></p>
 
-<input type="email" placeholder="Email">
+<p>📱 Teléfono: +506 83085192</p>
 
-<textarea rows="5" placeholder="Mensaje"></textarea>
+<p>💬 WhatsApp:  
+<a href="https://wa.me/50683085192" target="_blank">
+Enviar mensaje
+</a>
+</p>
 
-<button>Enviar mensaje</button>
+<div class="socials">
+
+<a href="https://instagram.com/steven_s46" target="_blank">Instagram</a>
+
+<a href="https://facebook.com/Steven Obando" target="_blank">Facebook</a>
+
+<a href="https://tiktok.com/@tuusuario" target="_blank">TikTok</a>
+
+</div>
 
 </div>
 
@@ -289,4 +248,5 @@ para marcas, empresas y proyectos creativos.
 </footer>
 
 </body>
+
 </html>
