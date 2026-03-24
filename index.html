@@ -1,1037 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Steven Obando | Diseñador Gráfico</title>
-  <meta name="description" content="Portafolio profesional de Steven Obando, diseñador gráfico especializado en branding, contenido para redes sociales y diseño visual de alto impacto." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    :root {
-      --bg: #0b0f19;
-      --bg-soft: #111827;
-      --card: rgba(17, 24, 39, 0.8);
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --line: rgba(255, 255, 255, 0.08);
-      --accent: #8b5cf6;
-      --accent-2: #22d3ee;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      --radius: 24px;
-      --container: 1180px;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(139, 92, 246, 0.16), transparent 30%),
-        radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 28%),
-        linear-gradient(180deg, #08101d 0%, #0b0f19 45%, #070b14 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(calc(100% - 2rem), var(--container));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 96px 0;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.04);
-      border-radius: 999px;
-      color: #d1d5db;
-      font-size: 0.9rem;
-      backdrop-filter: blur(10px);
-    }
-
-    .tag::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+      background: #0f0f0f;
+      color: white;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(14px);
-      background: rgba(5, 8, 16, 0.66);
-      border-bottom: 1px solid var(--line);
+      padding: 40px 20px;
+      text-align: center;
+      background: #111;
     }
 
-    .nav {
-      min-height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+    header h1 {
+      font-size: 2.5rem;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.3px;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: white;
-      font-weight: 800;
-      box-shadow: 0 14px 30px rgba(34, 211, 238, 0.2);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px 22px;
-      border-radius: 16px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: white;
-      box-shadow: 0 18px 40px rgba(34, 211, 238, 0.18);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.04);
-      border-color: rgba(255,255,255,0.1);
-      color: var(--text);
-    }
-
-    .hero {
-      padding: 88px 0 56px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.7rem, 6vw, 5.6rem);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
-      margin: 18px 0 22px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #ffffff 10%, #c4b5fd 45%, #67e8f9 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero p {
-      font-size: 1.08rem;
-      color: #d1d5db;
-      max-width: 60ch;
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.3rem;
-      margin-bottom: 4px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .hero-card {
-      position: relative;
-      padding: 22px;
-      border-radius: 32px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: -20% auto auto -10%;
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle, rgba(139, 92, 246, 0.35), transparent 65%);
-      pointer-events: none;
-    }
-
-    .mockup {
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: #0f172a;
-    }
-
-    .mockup-top {
-      display: flex;
-      gap: 8px;
-      padding: 12px 14px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.03);
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-    }
-
-    .mockup-body {
-      padding: 24px;
-      display: grid;
-      gap: 16px;
-    }
-
-    .mockup-block {
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.22), rgba(34, 211, 238, 0.18));
-      border: 1px solid rgba(255,255,255,0.08);
-      min-height: 92px;
-      padding: 18px;
-    }
-
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: end;
-      margin-bottom: 34px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1;
-      letter-spacing: -0.04em;
-      margin-bottom: 10px;
-    }
-
-    .section-heading p {
-      max-width: 62ch;
-      color: var(--muted);
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      transition: transform 0.25s ease, border-color 0.25s ease;
-      backdrop-filter: blur(10px);
-    }
-
-    .card:hover,
-    .project:hover {
-      transform: translateY(-6px);
-      border-color: rgba(103, 232, 249, 0.25);
-    }
-
-    .card h3 {
-      font-size: 1.15rem;
-      margin: 18px 0 10px;
-    }
-
-    .card p,
-    .project p,
-    .about-copy p,
-    .cta p,
-    .contact-copy p,
-    footer p {
-      color: var(--muted);
-    }
-
-    .icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      font-size: 1.25rem;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(34, 211, 238, 0.18));
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .project {
-      overflow: hidden;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .project-thumb {
-      aspect-ratio: 16 / 10;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.28), rgba(34, 211, 238, 0.18));
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-
-    .project-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-      background: #0f172a;
-    }
-
-    .project-content {
-      padding: 24px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 7px 11px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #dbeafe;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid rgba(255,255,255,0.08);
-      margin-bottom: 14px;
-    }
-
-    .project h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-    }
-
-    .project ul {
-      list-style: none;
-      display: grid;
-      gap: 8px;
-      margin: 18px 0 20px;
-      color: #e5e7eb;
-      font-size: 0.96rem;
-    }
-
-    .project ul li::before {
-      content: "•";
-      color: var(--accent-2);
-      margin-right: 8px;
-    }
-
-    .chips {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .chip {
-      font-size: 0.84rem;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      color: #d1d5db;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .about-grid,
-    .contact-grid,
-    .cta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .about-copy,
-    .about-panel,
-    .contact-copy,
-    .contact-panel,
-    .cta {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .about-copy h3,
-    .contact-copy h3,
-    .cta h3 {
-      font-size: 1.7rem;
-      line-height: 1.05;
-      margin: 12px 0 16px;
-      letter-spacing: -0.03em;
-    }
-
-    .about-list {
-      margin-top: 20px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .about-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      color: #e5e7eb;
-    }
-
-    .about-item span {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      margin-top: 8px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      flex-shrink: 0;
-    }
-
-    .about-panel {
-      display: grid;
-      gap: 16px;
-    }
-
-    .panel-box {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 22px;
-    }
-
-    .panel-box strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1rem;
-    }
-
-    .cta {
-      grid-template-columns: 1.25fr 0.75fr;
-      margin-top: 24px;
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: flex-end;
-    }
-
-    .contact-panel {
-      display: grid;
-      gap: 14px;
-    }
-
-    .contact-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .contact-label {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .contact-value {
-      font-weight: 600;
-      text-align: right;
-      word-break: break-word;
-    }
-
-    footer {
-      padding: 26px 0 42px;
-      border-top: 1px solid var(--line);
-    }
-
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    header p {
+      color: #aaa;
+      margin-top: 10px;
     }
 
     .social {
-      width: 46px;
-      height: 46px;
-      border-radius: 16px;
+      margin-top: 20px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .portfolio h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .portfolio p {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    .portfolio-grid {
       display: grid;
-      place-items: center;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
     }
 
-    .social:hover {
-      transform: translateY(-3px);
-      border-color: rgba(103, 232, 249, 0.3);
-      background: rgba(255,255,255,0.08);
+    .portfolio-item {
+      background: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.3s;
     }
 
-    .social i {
-      font-size: 18px;
+    .portfolio-item:hover {
+      transform: translateY(-10px);
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+    .portfolio-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
     }
 
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
+    .portfolio-item h3 {
+      padding: 15px;
     }
 
-    @media (max-width: 980px) {
-      .hero-grid,
-      .about-grid,
-      .contact-grid,
-      .cta,
-      .projects,
-      .services,
-      .section-heading {
-        grid-template-columns: 1fr;
-      }
-
-      .section-heading {
-        align-items: start;
-      }
-
-      .cta-actions {
-        justify-content: start;
-      }
-
-      .nav-links {
-        display: none;
-      }
+    .portfolio-item p {
+      padding: 0 15px 15px;
+      font-size: 0.9rem;
+      color: #bbb;
     }
 
-    @media (max-width: 640px) {
-      .hero {
-        padding-top: 56px;
-      }
-
-      .section {
-        padding: 72px 0;
-      }
-
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-row,
-      .contact-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .contact-value {
-        text-align: left;
-      }
-
-      .btn,
-      .hero-actions a {
-        width: 100%;
-      }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      margin-top: 50px;
+      color: #777;
     }
   </style>
 </head>
+
 <body>
 
+  <!-- HEADER -->
   <header>
-    <div class="container nav">
-      <a href="#inicio" class="brand">
-        <span class="brand-mark">SO</span>
-        <span>Steven Obando</span>
-      </a>
+    <h1>Steven Obando</h1>
+    <p>Diseñador Gráfico | Branding | Diseño Comercial</p>
 
-      <nav class="nav-links">
-        <a href="#servicios">Servicios</a>
-        <a href="#portfolio">Portafolio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-
-      <a class="btn btn-secondary" href="#contacto">Trabajemos</a>
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+      <a href="mailto:tuemail@gmail.com">Correo</a>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="reveal show">
-          <span class="tag">Diseñador gráfico · Branding · Redes sociales</span>
-          <h1>
-            Diseño visual que hace que tu marca se vea
-            <span class="gradient-text">profesional, fuerte y lista para vender.</span>
-          </h1>
-          <p>
-            Soy Steven Obando. Creo identidades visuales, piezas publicitarias y contenido gráfico con enfoque estratégico para marcas, emprendedores y negocios que quieren destacar de verdad.
-          </p>
+  <!-- PORTFOLIO -->
+  <section class="portfolio">
+    <div class="container">
+      <h2>Mis Proyectos</h2>
+      <p>Trabajos recientes enfocados en identidad visual y diseño comercial</p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#portfolio">Ver proyectos</a>
-            <a class="btn btn-secondary" href="#contacto">Contactarme</a>
-          </div>
+      <div class="portfolio-grid">
 
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>Branding</strong>
-              <span>Identidad visual con carácter y coherencia.</span>
-            </div>
-            <div class="stat">
-              <strong>Social Media</strong>
-              <span>Contenido gráfico listo para captar atención.</span>
-            </div>
-            <div class="stat">
-              <strong>Diseño Comercial</strong>
-              <span>Piezas pensadas para comunicar y convertir.</span>
-            </div>
-          </div>
+        <div class="portfolio-item">
+          <img src="img/proyecto1.jpg" alt="">
+          <h3>Logo Personal</h3>
+          <p>Diseño de identidad visual para marca personal de preparador físico.</p>
         </div>
 
-        <div class="hero-card reveal">
-          <div class="mockup">
-            <div class="mockup-top">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-            <div class="mockup-body">
-              <div class="mockup-block">
-                <strong style="display:block; font-size:1.35rem; margin-bottom:8px;">Steven Obando</strong>
-                <span style="color:#d1d5db;">Visual identity · Ads · Creative direction</span>
-              </div>
-              <div class="mockup-block" style="min-height:140px; display:grid; place-items:center; text-align:center;">
-                <div>
-                  <div style="font-size:0.88rem; color:#d1d5db; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.08em;">Portafolio profesional</div>
-                  <div style="font-size:1.7rem; font-weight:800; line-height:1.05;">Branding moderno para marcas que quieren subir de nivel</div>
-                </div>
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-                <div class="mockup-block" style="min-height:88px;"></div>
-                <div class="mockup-block" style="min-height:88px;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="servicios">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="tag">Servicios</span>
-            <h2>Qué puedo hacer por tu marca</h2>
-          </div>
-          <p>
-            Diseño soluciones visuales que no solo se ven bien, sino que ayudan a posicionar mejor tu negocio y a generar una imagen más seria, atractiva y confiable.
-          </p>
+        <div class="portfolio-item">
+          <img src="img/proyecto2.jpg" alt="">
+          <h3>Etiqueta de Café</h3>
+          <p>Diseño de etiqueta para producto comercial de café.</p>
         </div>
 
-        <div class="services">
-          <article class="card reveal">
-            <div class="icon">✦</div>
-            <h3>Identidad visual</h3>
-            <p>Logotipos, sistemas visuales, selección tipográfica y estilo de marca para construir una imagen sólida y memorable.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="icon">▣</div>
-            <h3>Contenido para redes</h3>
-            <p>Piezas gráficas para Instagram, Facebook, TikTok y campañas promocionales con enfoque profesional y comercial.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="icon">⬢</div>
-            <h3>Diseño publicitario</h3>
-            <p>Banners, flyers, promociones y material visual pensado para captar atención y transmitir valor de forma inmediata.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="portfolio">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="tag">Portafolio</span>
-            <h2>Trabajos con enfoque visual y estratégico</h2>
-          </div>
-          <p>
-            Una selección de proyectos reales en branding, diseño editorial, publicidad y empaque, desarrollados para negocios y marcas con necesidades comerciales concretas.
-          </p>
+        <div class="portfolio-item">
+          <img src="img/proyecto3.jpg" alt="">
+          <h3>Menú de Mesa</h3>
+          <p>Diseño editorial para restaurante.</p>
         </div>
 
-        <div class="projects">
-          <article class="project reveal">
-            <div class="project-thumb">
-              <img src="img/km-personal-trainer.png" alt="KM Personal Trainer Logo">
-            </div>
-
-            <div class="project-content">
-              <span class="eyebrow">Branding</span>
-              <h3>KM Personal Trainer</h3>
-
-              <p>
-                Diseño de logotipo para preparador físico con enfoque en fuerza, rendimiento y profesionalismo.
-              </p>
-
-              <ul>
-                <li>Objetivo: crear una identidad fuerte y deportiva.</li>
-                <li>Solución: combinación de tipografía sólida y elemento visual relacionado al entrenamiento.</li>
-                <li>Resultado: marca clara, reconocible y con presencia profesional.</li>
-              </ul>
-
-              <div class="chips">
-                <span class="chip">Logo</span>
-                <span class="chip">Fitness</span>
-                <span class="chip">Branding</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <div class="project-thumb">
-              <img src="img/menu-kin-dee.png" alt="Menú de mesa Kin Dee Thai Cuisine">
-            </div>
-
-            <div class="project-content">
-              <span class="eyebrow">Diseño editorial</span>
-              <h3>Menú de mesa · Kin Dee Thai Cuisine</h3>
-
-              <p>
-                Diseño de menú de mesa para restaurante tailandés, organizado para presentar platos, precios e identidad visual de forma clara y atractiva.
-              </p>
-
-              <ul>
-                <li>Objetivo: mostrar el menú completo con buena lectura y orden visual.</li>
-                <li>Solución: composición por secciones, uso de color de marca e integración de fotografías de productos.</li>
-                <li>Resultado: pieza funcional, comercial y alineada con la identidad del restaurante.</li>
-              </ul>
-
-              <div class="chips">
-                <span class="chip">Menú</span>
-                <span class="chip">Restaurante</span>
-                <span class="chip">Diseño editorial</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <div class="project-thumb">
-              <img src="img/menu-delivery-kin-dee.jpg" alt="Menú Delivery Kin Dee Thai Cuisine">
-            </div>
-
-            <div class="project-content">
-              <span class="eyebrow">Publicidad / Delivery</span>
-              <h3>Menú Delivery · Kin Dee Thai Cuisine</h3>
-
-              <p>
-                Diseño de brochure para servicio de delivery enfocado en promoción, contacto directo y presentación visual atractiva de productos.
-              </p>
-
-              <ul>
-                <li>Objetivo: facilitar pedidos y mejorar la presentación del servicio a domicilio.</li>
-                <li>Solución: diseño dinámico con enfoque en imágenes, contacto y jerarquía clara.</li>
-                <li>Resultado: pieza visual más llamativa y orientada a conversión de clientes.</li>
-              </ul>
-
-              <div class="chips">
-                <span class="chip">Delivery</span>
-                <span class="chip">Brochure</span>
-                <span class="chip">Publicidad</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <div class="project-thumb">
-              <img src="img/etiqueta-cafe-la-cascada.png" alt="Etiqueta de producto Café La Cascada">
-            </div>
-
-            <div class="project-content">
-              <span class="eyebrow">Empaque / Etiqueta</span>
-              <h3>Etiqueta de producto · Café La Cascada</h3>
-
-              <p>
-                Diseño de etiqueta para café artesanal enfocado en identidad de producto, presentación comercial y comunicación visual atractiva.
-              </p>
-
-              <ul>
-                <li>Objetivo: crear una presentación llamativa para un café artesanal local.</li>
-                <li>Solución: uso de elementos naturales, composición temática y jerarquía clara de información.</li>
-                <li>Resultado: etiqueta con identidad propia, valor visual y mejor presencia comercial.</li>
-              </ul>
-
-              <div class="chips">
-                <span class="chip">Etiqueta</span>
-                <span class="chip">Empaque</span>
-                <span class="chip">Producto</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="sobre-mi">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="tag">Sobre mí</span>
-            <h2>Diseño con intención, no solo con estética</h2>
-          </div>
-          <p>
-            Presento soluciones visuales pensadas para negocios, marcas personales y proyectos que necesitan verse mejor para comunicar con más fuerza.
-          </p>
+        <div class="portfolio-item">
+          <img src="img/proyecto4.jpg" alt="">
+          <h3>Menú Delivery</h3>
+          <p>Diseño optimizado para pedidos a domicilio.</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-copy reveal">
-            <span class="tag">Steven Obando</span>
-            <h3>Ayudo a negocios y marcas personales a verse más profesionales.</h3>
-            <p>
-              Soy diseñador gráfico enfocado en identidad visual, contenido para redes sociales, material publicitario y piezas comerciales. Mi objetivo es crear diseños con fuerza visual, buena presentación y valor real para cada cliente.
-            </p>
-            <div class="about-list">
-              <div class="about-item"><span></span><div>Diseño visual con enfoque moderno y profesional.</div></div>
-              <div class="about-item"><span></span><div>Comunicación clara para marcas y emprendimientos.</div></div>
-              <div class="about-item"><span></span><div>Presencia digital pensada para atraer mejores clientes.</div></div>
-            </div>
-          </div>
-
-          <div class="about-panel reveal">
-            <div class="panel-box">
-              <strong>En qué me enfoco</strong>
-              <p>Branding, contenido gráfico, diseño para campañas, menús, etiquetas y piezas visuales que elevan la percepción de una marca.</p>
-            </div>
-            <div class="panel-box">
-              <strong>Mi enfoque</strong>
-              <p>Combino estilo, jerarquía, contraste y claridad para crear diseños que se vean fuertes y funcionen bien en contextos comerciales reales.</p>
-            </div>
-            <div class="panel-box">
-              <strong>Lo que busco lograr</strong>
-              <p>Que cada proyecto se vea serio, atractivo y competitivo desde el primer vistazo.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta reveal">
-          <div>
-            <span class="tag">Listo para trabajar</span>
-            <h3>Si quieres que tu marca se vea a otro nivel, hablemos.</h3>
-            <p>
-              Trabajo en diseño visual para marcas, negocios y proyectos que necesitan una mejor presentación para vender, comunicar y destacar.
-            </p>
-          </div>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="https://wa.me/506XXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a class="btn btn-secondary" href="https://instagram.com/tuusuario" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contacto">
-      <div class="container contact-grid">
-        <div class="contact-copy reveal">
-          <span class="tag">Contacto</span>
-          <h3>Haz que encontrarte sea fácil.</h3>
-          <p>
-            Si te interesa trabajar conmigo, puedes escribirme directamente por WhatsApp, correo o redes sociales.
-          </p>
-        </div>
-
-        <div class="contact-panel reveal">
-          <div class="contact-item">
-            <div>
-              <div class="contact-label">Correo</div>
-              <div class="contact-value">stephenobando@gmail.com</div>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div>
-              <div class="contact-label">WhatsApp</div>
-              <div class="contact-value">+50683085192</div>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div>
-              <div class="contact-label">https://www.instagram.com/steven_s46/</div>
-              <div class="contact-value">steven_s46/</div>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div>
-              <div class="contact-label">Facebook / TikTok</div>
-              <div class="contact-value">Thttps://www.tiktok.com/@steven_masterchief?is_from_webapp=1&sender_device=pc</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-row">
-      <p>© 2026 Steven Obando. Diseñado para destacar y convertir.</p>
-
-      <div class="socials">
-        <a class="social" href="https://instagram.com/steven_s46/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <a class="social" href="https://facebook.com/Stephenobando46" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a class="social" href="https://tiktok.com/@steven_masterchief" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <i class="fab fa-tiktok"></i>
-        </a>
-
-        <a class="social" href="https://wa.me/50683085192" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-
-        <a class="social" href="mailto:stephenobando@gmail.com" aria-label="Correo">
-          <i class="fas fa-envelope"></i>
-        </a>
       </div>
     </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Steven Obando - Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach((el, index) => {
-      if (!el.classList.contains('show')) {
-        el.style.transitionDelay = `${Math.min(index * 0.05, 0.25)}s`;
-      }
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
